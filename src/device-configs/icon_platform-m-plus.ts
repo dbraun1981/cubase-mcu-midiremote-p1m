@@ -7,7 +7,7 @@ import { ChannelSurfaceElements, DeviceConfig } from ".";
 import { JogWheel } from "/decorators/surface-elements/JogWheel";
 import { LedButton } from "/decorators/surface-elements/LedButton";
 import { LedPushEncoder } from "/decorators/surface-elements/LedPushEncoder";
-import { TouchSensitiveMotorFader } from "/decorators/surface-elements/TouchSensitiveFader";
+import { TouchSensitiveMotorFader } from "/decorators/surface-elements/TouchSensitiveMotorFader";
 import * as encoderPageConfigs from "/mapping/encoders/page-configs";
 import { createElements } from "/util";
 

@@ -3,7 +3,7 @@ import { JogWheel } from "/decorators/surface-elements/JogWheel";
 import { Lamp } from "/decorators/surface-elements/Lamp";
 import { LedButton } from "/decorators/surface-elements/LedButton";
 import { LedPushEncoder } from "/decorators/surface-elements/LedPushEncoder";
-import { TouchSensitiveMotorFader } from "/decorators/surface-elements/TouchSensitiveFader";
+import { TouchSensitiveMotorFader } from "/decorators/surface-elements/TouchSensitiveMotorFader";
 import { Device, MainDevice } from "/devices";
 import { EncoderMappingConfig } from "/mapping/encoders/EncoderMapper";
 import { SegmentDisplayManager } from "/midi/managers/SegmentDisplayManager";

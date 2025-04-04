@@ -7,7 +7,7 @@ import { ChannelSurfaceElements, DeviceConfig, MainDeviceSurface } from ".";
 import { JogWheel } from "/decorators/surface-elements/JogWheel";
 import { LedButton } from "/decorators/surface-elements/LedButton";
 import { LedPushEncoder } from "/decorators/surface-elements/LedPushEncoder";
-import { TouchSensitiveMotorFader } from "/decorators/surface-elements/TouchSensitiveFader";
+import { TouchSensitiveMotorFader } from "/decorators/surface-elements/TouchSensitiveMotorFader";
 import { MainDevice } from "/devices";
 import * as pageConfigs from "/mapping/encoders/page-configs";
 import { IconColorManager } from "/midi/managers/colors/IconColorManager";

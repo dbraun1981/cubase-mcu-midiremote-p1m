@@ -8,7 +8,7 @@ import { JogWheel } from "/decorators/surface-elements/JogWheel";
 import { Lamp } from "/decorators/surface-elements/Lamp";
 import { LedButton } from "/decorators/surface-elements/LedButton";
 import { LedPushEncoder } from "/decorators/surface-elements/LedPushEncoder";
-import { TouchSensitiveMotorFader } from "/decorators/surface-elements/TouchSensitiveFader";
+import { TouchSensitiveMotorFader } from "/decorators/surface-elements/TouchSensitiveMotorFader";
 import * as encoderPageConfigs from "/mapping/encoders/page-configs";
 import { BehringerColorManager } from "/midi/managers/colors/BehringerColorManager";
 import { createElements } from "/util";

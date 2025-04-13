@@ -22,6 +22,7 @@ const surfaceWidth = channelWidth * 8 + 0.5;
  */
 interface MainDeviceCustomElements {
   buttonMatrix: LedButton[][][];
+  emptyHardwareButtons: LedButton[];
 }
 
 export const deviceConfig: DeviceConfig = {
@@ -251,6 +252,7 @@ export const deviceConfig: DeviceConfig = {
 
       customElements: {
         buttonMatrix,
+        emptyHardwareButtons: leftButtonMatrix.slice(1).flat(),
       },
     };
   },
@@ -275,9 +277,14 @@ export const deviceConfig: DeviceConfig = {
       }
     }
 
+    // Map empty hardware buttons
+    for (const [buttonIndex, button] of device.customElements.emptyHardwareButtons.entries()) {
+      button.bindToNote(ports, 80 + buttonIndex, 1); // Channel 2
+    }
+
     // Reset non-MCU (channel 2) buttons on (de)activation
     const resetChannel2Buttons = (context: MR_ActiveDevice) => {
-      for (const button of channel2Buttons) {
+      for (const button of [...channel2Buttons, ...device.customElements.emptyHardwareButtons]) {
         button.sendNoteOn(context, 0);
       }
     };

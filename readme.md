@@ -235,9 +235,9 @@ Lastly, thanks to iCON for supporting the development of this script variant!
 
 The iCON P1-M has a touch screen button matrix with customizable button labels (via the iMAP software).
 The mappings of the MIDI Remote Script are available as an iMAP preset that you can [download](assets/mcu-midiremote-p1-m.imap) and load into iMAP so the hardware button layout matches the layout of the MIDI Remote control surface.
-When you customize your mappings in the Cubase MIDI Remote Mapping Assistant, you can use the iMAP software to update the labels on the V1-M.
+When you customize your mappings in the Cubase MIDI Remote Mapping Assistant, you can use the iMAP software to update the labels on the P1-M.
 The default mapping assigns each button of the first three function layers (blue, green, yellow) to a corresponding virtual button on the MIDI Remote control surface.
-Presuming the provided iMAP preset has been loaded, the following aspects of the V1-M script differ from the default mapping described in the previous section:
+Presuming the provided iMAP preset has been loaded, the following aspects of the P1-M script differ from the default mapping described in the previous section:
 
 - All buttons are labelled according to their actual functions (even if these functions differ from the default MCU functions).
 - The first (blue) and second (green) function layers expose three buttons that are not available in Cubase's default MCU mapping: Edit Instrument, Click, and Reset Meters.

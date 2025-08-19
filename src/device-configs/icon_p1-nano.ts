@@ -35,8 +35,8 @@ export const deviceConfig: DeviceConfig = {
     {
       main: (detectionPortPair) =>
         detectionPortPair
-          .expectInputNameStartsWith("iCON P1 Nano")
-          .expectOutputNameStartsWith("iCON P1 Nano"),
+          .expectInputNameStartsWith("iCON P1-Nano")
+          .expectOutputNameStartsWith("iCON P1-Nano"),
       extender: () => {},
     },
   ],

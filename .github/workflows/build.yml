@@ -1,3 +1,4 @@
+# Updated to use Node 24 LTS
 name: build
 
 on: [push, pull_request]
@@ -10,11 +11,13 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
       - name: Setup Node.js
+        # use v4 of the official action and pin to Node 24.x
         uses: actions/setup-node@v4
         with:
-          node-version: "lts/*"
+          node-version: '24.x'
+          cache: 'npm'
       - name: Install dependencies
         run: npm ci
       - name: Build scripts
@@ -31,14 +34,15 @@ jobs:
     needs: build
     if: github.repository_owner == 'dbraun1981' && github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "lts/*"
+          node-version: '24.x'
+          cache: 'npm'
       - name: Install dependencies
         run: npm ci
-      - name: Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
+      #- name: Release
+        #env:
+         #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        #run: npx semantic-release
